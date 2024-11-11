@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, render_template
 from flask_cors import CORS
 import torch
 import joblib
@@ -80,6 +80,11 @@ def preprocess_text(text):
 
     text = ' '.join(words)
     return text
+
+# Route to render index.html
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 # Predict route
 @app.route('/predict', methods=['POST'])
