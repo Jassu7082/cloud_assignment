@@ -2,4 +2,5 @@ Flask
 torch
 joblib
 nltk
+flask_cors
 Gunicorn
