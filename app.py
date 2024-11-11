@@ -31,7 +31,8 @@ class SimpleNN(torch.nn.Module):
         return x
 
 # Initialize and load model
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cpu")
+
 
 # Inspect vectorizer
 with open(vectorizer_path, 'rb') as f:
