@@ -2,3 +2,4 @@ Flask
 torch
 joblib
 nltk
+Gunicorn
