@@ -68,12 +68,8 @@
                 body: JSON.stringify({ tweet: tweet })
             });
 
-            const data = await response.json();
-            if (data.sentiment) {
-                document.getElementById('result').innerText = `Sentiment: ${data.sentiment}`;
-            } else {
-                document.getElementById('result').innerText = `Error: ${data.error}`;
-            }
+            const sentiment = await response.text();
+            document.getElementById('result').innerText = `Sentiment: ${sentiment}`;
         });
     </script>
 </body>

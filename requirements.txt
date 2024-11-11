@@ -1,7 +1,6 @@
 Flask
 torch
 joblib
-nltk
 flask_cors
 numpy
 scikit-learn
